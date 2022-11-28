@@ -1,8 +1,66 @@
+:root {
+	--nav-bg-color: #33075c;
+  --main-bg-color: #7b45ad;
+	--section-bg-color: rgb(245,245,245);
+  --main-bg-color-opacque: rgba(154, 49, 252,0.7);
+}
+
 body{
 	font-family: 'Lato', sans-serif;
 }
+footer{
+	vertical-align: middle!imporatnt;
+	padding: 2%;
+	background: var(--nav-bg-color);
+}
+footer .footer-content{
+	margin: auto;
+	width: 60%;
+}
+footer .footer-content div{
+	padding: 10px;
+}
+footer .footer-content a{
+	color: lightgray;
+}
+footer .footer-content .footer-second{
+	border-top: solid 1px gray;
+	color: gray;
+	padding: 30px;
+}
+footer .footer-content .footer-credits{
+	color: gray;
+	padding: 0px;
+	border: none;
+	font-size: 0.6em;
+}
+
+
+nav{
+	background: var(--nav-bg-color);
+}
+header .title{
+	color: white;
+}
+header .container{
+	vertical-align: middle!imporatnt;
+	padding-top: 2%;
+}
 header.bg-light{
-	background-color: #F9ebc1!important;
+	background-image: url("../img/bg.jpg");
+	/*background-image: url("../img/bg_leipzig.jpg");*/
+	background-color: #white!important;
+	background-repeat: no-repeat, repeat;
+	background-size: cover;
+	min-height: 450px;
+}
+header .logo img{
+	max-width: 90%;
+}
+.orgs .org{
+	text-align: center;
+	margin: 0 auto;
+	padding: 5px;
 }
 
 @media (max-width: 992px) {
@@ -42,25 +100,41 @@ header.bg-light{
 	border-radius: 50%;
 }
 
-.side {
+.side-container {
+	background-color: var(--section-bg-color);
+	padding: 15px;
+	border-radius: 1%;
+	border: solid 0.5px lightgray;
+}
+.side-container .side{
 	/* border-style: double;
 	border-color: #000078;*/
-	margin-bottom: 10px;
-	padding: 4px;
+	margin-bottom: 30px !important;
+}
+.side h5 {
+	padding: 3px;
+	border-bottom: solid 2px var(--main-bg-color);
 }
 
 .title-section {
-	background: #000078;
-	color: white;
-
+	padding: 3px;
+	width: 50%;
+	margin: auto;
+	border-bottom: solid 2px var(--main-bg-color);
 }
-
-
-
-.side h4 {
-	background: #000078;
-	color: white;
-
+.section{
+	margin-top: 50px;
+}
+.section-content{
+	padding-top: 4%;
+	margin: auto;
+}
+.org img{
+	max-width: 90%;
+	filter: grayscale(1);
+}
+.org img:hover{
+	filter: grayscale(0);
 }
 
 header {
@@ -78,10 +152,14 @@ header {
 
 @media (min-width: 992px) {
 	.logo {
-		text-align: left!important;
+		margin-right: 0px !important;
+		text-align: right!important;
+		margin: auto;
 	}
 	.title {
-		text-align: right!important;
+		text-align: left!important;
+		margin-left: 0px !important;
+		border-left: solid white 2px;
 	}
 	.role-profile {
 		text-align: right!important;

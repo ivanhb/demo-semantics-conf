@@ -19,6 +19,10 @@
 	<link href="../css/scrolling-nav.css" rel="stylesheet">
 
 	<link href="../css/style.css" rel="stylesheet">
+
+	<!-- Mark down -->
+	<script type="module" src="../vendor/zero-md-v2/zero-md.min.js"></script>
+
 	<script src="../vendor/jquery/jquery.min.js"></script>
 
 </head>
@@ -3873,8 +3877,12 @@
 		$(".pop").on("click", function() {
 			$('#imagepreview').attr('src', $(this).find("img").attr('src'));
 			$('#imagemodal').modal('show');
+			$("#page-footer").load("../footer.html");
 		});
 	</script>
+
+	<!-- Footer -->
+	<footer id="page-footer"></footer>
 
 </body>
 

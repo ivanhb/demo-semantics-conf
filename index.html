@@ -18,6 +18,9 @@
 
 	<link href="css/style.css" rel="stylesheet">
 
+	<!-- Mark down -->
+	<script type="module" src="vendor/zero-md-v2/zero-md.min.js"></script>
+
 	<script src="vendor/jquery/jquery.min.js"></script>
 
 </head>
@@ -31,23 +34,22 @@
 	<script>
 		$(function() {
 			$("#nav-placeholder").load("nav.html");
-			$("#sidecol").load("side.html", function() {
-				$("#sponsors").remove();
-			});
-
+			$("#sidecol").load("side.html");
+			$("#page-footer").load("footer.html");
 		});
 	</script>
 
 	<header class="bg-light">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6 mx-auto logo">
-					<img src="img/semantics2023_logo.png" height="250" alt="">
+				<div class="col-lg-5 mx-auto logo">
+					<img src="img/semantics-logo-white.png" alt="">
 				</div>
-				<div class="col-lg-6 mx-auto title" style="color:#000078">
-					<h1>SEMANTICS-2023</h1>
-					<h3>The AAAA Conference on BBB</h3>
-					<p>MMMM DD - DD, YYYY</p>
+				<div class="col-lg-5 mx-auto title">
+					<h1>SEMANTiCS 2023 EU</h1>
+					<h4>19th International Conference on Semantic Systems</h4>
+					<p>September 20 - 22, 2023</p>
+					<p>Leipzig, Germany</p>
 				</div>
 			</div>
 
@@ -63,28 +65,68 @@
 
 							<div class="row">
 								<div class="col-lg-12 mx-auto">
-									<p class="text-justify"> words words words words words words words words words words words words words words words.</p>
-									<p class="text-justify"> words words words words words words words words words.</p>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-lg-12 mx-auto">
-									<img src="img/travel-map.png" class="img-fluid mx-auto d-block" alt="Student travel support program">
+									<zero-md src="pages/md/home.md">
+										<template> <link href="../css/md-style.css" rel="stylesheet"/> </template>
+									</zero-md>
 								</div>
 							</div>
 
-							<div class="row">
-								<div class="col-lg-12 mx-auto">
-									<p>
-										ds words words words words words words words words words words words words words words.
-									</p>
-								</div>
+							<div class="section">
+									<div class="row">
+										<div class="col-lg-12 mx-auto">
+											<h4 class="title-section text-center">PARTNERS</h4>
+										</div>
+									</div>
+
+										<div class="row section-content orgs">
+											<div class="org col-sm-3"><a href="https://www.adaptcentre.ie/about" target="_blank"><img typeof="foaf:Image" src="https://2022-eu.semantics.cc/sites/2022-eu.semantics.cc/files/styles/logo/public/Sponsors/adaptkantanlabs.png?itok=8AWPv2Pf" width="60" height="50" alt=""></a></div>
+											<div class="org col-sm-3"><a href="https://www.turing.ac.uk/" target="_blank"><img typeof="foaf:Image" src="https://2022-eu.semantics.cc/sites/2022-eu.semantics.cc/files/styles/logo/public/Sponsors/1200px-Alan_Turing_Institute_logo.svg_.png?itok=vkZR9NIT" width="107" height="45" alt=""></a></div>
+											<div class="org col-sm-3"><a href="http://wiki.dbpedia.org/" target="_blank"><img typeof="foaf:Image" src="https://2022-eu.semantics.cc/sites/2022-eu.semantics.cc/files/styles/logo/public/Sponsors/1200px-DBpediaLogo.svg_.png?itok=8e-rBhpC" width="73" height="45" alt=""></a></div>
+											<div class="org col-sm-3"><a href="https://www.fiz-karlsruhe.de/" target="_blank"><img typeof="foaf:Image" src="https://2022-eu.semantics.cc/sites/2022-eu.semantics.cc/files/styles/logo/public/Sponsors/FIZ_Logo_fbg_engl.png?itok=LXFtqWCW" width="150" height="34" alt=""></a></div>
+										</div>
+
+										<div class="row section-content orgs">
+											<div class="org col-sm-3"><a href="http://www.gfwm.at/" target="_blank"><img typeof="foaf:Image" src="https://2022-eu.semantics.cc/sites/2022-eu.semantics.cc/files/styles/logo/public/Sponsors/logo_gfwm_220x84_0.png?itok=8RGkp98O" width="110" height="44" alt=""></a></div>
+											<div class="org col-sm-3"><a href="https://www.kcl.ac.uk/" target="_blank"><img typeof="foaf:Image" src="https://2022-eu.semantics.cc/sites/2022-eu.semantics.cc/files/styles/logo/public/Sponsors/Kings_College_London-logo-B1996FD9A6-seeklogo.com_.png?itok=fchBZtr9" width="78" height="45" alt=""></a></div>
+											<div class="org col-sm-3"><a href="http://www.kit.edu" target="_blank"><img typeof="foaf:Image" src="https://2022-eu.semantics.cc/sites/2022-eu.semantics.cc/files/styles/logo/public/Sponsors/1200px-Logo_KIT.svg_.png?itok=t3-6L8la" width="90" height="45" alt="KIT-Karlsruhe Institute of Technology"></a></div>
+											<div class="org col-sm-3"><a href="http://www.knvi.nl" target="_blank"><img typeof="foaf:Image" src="https://2022-eu.semantics.cc/sites/2022-eu.semantics.cc/files/styles/logo/public/Sponsors/KNVI-Logo_RGB.png?itok=goXN4Qed" width="110" height="39" alt=""></a></div>
+										</div>
+
+										<div class="row section-content orgs">
+											<div class="org col-sm-3"><a href="https://www.tib.eu/en/" target="_blank"><img typeof="foaf:Image" src="https://2022-eu.semantics.cc/sites/2022-eu.semantics.cc/files/styles/logo/public/Sponsors/TIB_Wort_Bildmarke_500px_0.png?itok=OynFGczc" width="68" height="45" alt=""></a></div>
+											<div class="org col-sm-3"><a href="https://www.vienna.convention.at/en/meeting-destination" target="_blank"><img typeof="foaf:Image" src="https://2022-eu.semantics.cc/sites/2022-eu.semantics.cc/files/styles/logo/public/Sponsors/MDV_Logo_RGB_white_red.jpg?itok=ySiwUCEI" width="68" height="45" alt=""></a></div>
+											<div class="org col-sm-3"><a href="https://www.ordina.com/en/" target="_blank"><img typeof="foaf:Image" src="https://2022-eu.semantics.cc/sites/2022-eu.semantics.cc/files/styles/logo/public/Sponsors/Ordina-Logo-01.png?itok=ipIabQcp" width="110" height="31" alt=""></a></div>
+											<div class="org col-sm-3"><a href="http://www.pilod.nl/" target="_blank"><img typeof="foaf:Image" src="https://2022-eu.semantics.cc/sites/2022-eu.semantics.cc/files/styles/logo/public/Sponsors/PiLOD.png?itok=IXQLXUO0" width="50" height="71" alt=""></a></div>
+										</div>
+
+										<div class="row section-content orgs">
+											<div class="org col-sm-3"><a href="https://www.upm.es" target="_blank"><img typeof="foaf:Image" src="https://2022-eu.semantics.cc/sites/2022-eu.semantics.cc/files/styles/logo/public/Sponsors/internacional.png?itok=XJgXPBtE" width="60" height="46" alt=""></a></div>
+											<div class="org col-sm-3"><a href="https://www.uva.nl/" target="_blank"><img typeof="foaf:Image" src="https://2022-eu.semantics.cc/sites/2022-eu.semantics.cc/files/styles/logo/public/Sponsors/uoa.png?itok=m2tERz7H" width="110" height="31" alt=""></a></div>
+											<div class="org col-sm-3"><a href="https://www.informatik.uni-bonn.de/de" target="_blank"><img typeof="foaf:Image" src="https://2022-eu.semantics.cc/sites/2022-eu.semantics.cc/files/styles/logo/public/Sponsors/2000px-Universita%CC%88t_Bonn.svg_.png?itok=ibfQNJeW" width="110" height="42" alt=""></a></div>
+											<div class="org col-sm-3"><a href="https://viennabusinessagency.at/" target="_blank"><img typeof="foaf:Image" src="https://2022-eu.semantics.cc/sites/2022-eu.semantics.cc/files/styles/logo/public/Sponsors/210301_WA_Kombi3_RGB-800x796.png?itok=6L2srQyH" width="60" height="60" alt=""></a></div>
+										</div>
+
+										<div class="row section-content orgs d-flex justify-content-center">
+											<div class="org col-sm-3 col-centered"><a href="http://www.wolterskluwer.de" target="_blank"><img typeof="foaf:Image" src="https://2022-eu.semantics.cc/sites/2022-eu.semantics.cc/files/styles/logo/public/Sponsors/logo-wolters-kluwer.png?itok=0yvFjmPb" width="150" height="25" alt=""></a></div>
+										</div>
 							</div>
 
-							<div class="row">
-								<div class="col-lg-12 mx-auto">
-									<h4 class="title-section text-center">Sponsors</h4>
-								</div>
+							<div class="section">
+									<div class="row">
+										<div class="col-lg-12 mx-auto">
+											<h4 class="title-section text-center">ORGANIZED BY</h4>
+										</div>
+									</div>
+									<div class="row section-content orgs">
+									    <div class="org col-sm-3"><a href="http://www.semantic-web.at/" target="_blank"><img typeof="foaf:Image" src="https://2022-eu.semantics.cc/sites/2022-eu.semantics.cc/files/styles/logo/public/Sponsors/swc-logo-web.png?itok=dFh75utd" width="150" height="37" alt=""></a></div>
+									    <div class="org col-sm-3"><a href="https://emfs.eu/" target="_blank"><img typeof="foaf:Image" src="https://2022-eu.semantics.cc/sites/2022-eu.semantics.cc/files/styles/logo/public/Sponsors/emfs_logo.jpg?itok=BBHeRbBT" width="88" height="45" alt=""></a></div>
+									    <div class="org col-sm-3"><a href="http://infai.org/en/" target="_blank"><img typeof="foaf:Image" src="https://2022-eu.semantics.cc/sites/2022-eu.semantics.cc/files/styles/logo/public/Sponsors/infai.png?itok=uq3p8kkr" width="88" height="45" alt="Institute for Applied Informatics" title="Institute for Applied Informatics"></a></div>
+									    <div class="org col-sm-3"><a href="http://english.fhstp.ac.at/index" target="_blank"><img typeof="foaf:Image" src="https://2022-eu.semantics.cc/sites/2022-eu.semantics.cc/files/styles/logo/public/Sponsors/FHSTP_medienundwirtschaft_RGB.png?itok=mK83RF0m" width="110" height="34" alt=""></a></div>
+									</div>
+
+									<div class="row section-content orgs d-flex justify-content-center">
+										<div class="org col-sm-3"><a href="https://www.vu.nl/en/" target="_blank"><img typeof="foaf:Image" src="https://2022-eu.semantics.cc/sites/2022-eu.semantics.cc/files/styles/logo/public/Sponsors/VU-University-Amsterdam-logo.png?itok=TthTxwW2" width="110" height="30" alt=""></a></div>
+									</div>
 							</div>
 
 							<div class="row">
@@ -116,37 +158,8 @@
 		</div>
 	</section>
 
-
-	<!--section class="bg-light">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 mx-auto">
-
-				</div>
-			</div>
-		</div>
-	</section-->
-
-
-
-	<!--section class="bg-light">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 mx-auto">
-					<h2>Sponsors</h2>
-					<p class="lead">TBD</p>
-				</div>
-			</div>
-		</div>
-	</section-->
-
 	<!-- Footer -->
-	<!--footer class="py-5 bg-dark">
-		<div class="container">
-			<p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
-		</div>
-		<!-- /.container -->
-	<!--/footer-->
+	<footer id="page-footer"></footer>
 
 	<!-- Bootstrap core JavaScript -->
 
@@ -159,5 +172,6 @@
 	<script src="js/scrolling-nav.js"></script>
 
 </body>
+
 
 </html>
